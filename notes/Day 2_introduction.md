@@ -2,11 +2,11 @@
 
 # Error Mitigation for TDOA UWB Indoor Localization Using Unsupervised Machine Learning
 
-# Reading Progress
+## Reading Progress
  Completed the Introduction section.
 
 
-# Main Problem
+## Main Problem
 
 The paper addresses positioning errors in UWB TDoA indoor localization systems caused by:
 
@@ -16,7 +16,7 @@ The paper addresses positioning errors in UWB TDoA indoor localization systems c
 These effects introduce biases in ranging measurements and reduce localization accuracy.
 
 
-# Why is this important?
+## Why is this important?
 
 Accurate indoor positioning is required for:
 
@@ -26,7 +26,7 @@ Accurate indoor positioning is required for:
 - Indoor asset localization
 
 
-# Previous Approaches
+## Previous Approaches
 
 The paper discusses:
 
@@ -42,13 +42,13 @@ limitations when applied to large datasets and complex environments.
 
 
 
-# Key Observation
+## Key Observation
 
 Using only two clusters (LoS / NLoS) may be insufficient in dense multipath 
 environments because too few reliable measurements remain available for localization.
 
 
-# Authors' Contribution
+## Authors' Contribution
 The authors propose:
 
 - A Deep Embedded Clustering (DEC) framework
@@ -58,7 +58,7 @@ The authors propose:
 The goal is to reduce localization error without requiring labeled training data.
 
 
-# Personal Notes
+## Personal Notes
 
 The most interesting idea in the introduction is that the authors do not simply 
 classify measurements as LoS or NLoS. Instead, they create multiple clusters, evaluate 
