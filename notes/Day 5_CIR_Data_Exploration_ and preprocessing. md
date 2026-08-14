@@ -1,0 +1,76 @@
+# Day 5 – CIR Data Exploration and Preprocessing
+
+## Paper
+
+**Error Mitigation for TDoA UWB Indoor Localization Using Unsupervised Machine Learning**
+
+## Objective
+
+Prepare the raw CIR (Channel Impulse Response) data for reproducing the Deep Embedded Clustering (DEC) framework proposed in the paper.
+
+The main objective of this stage is to inspect the dataset, validate the integrity of the CIR measurements, detect corrupted samples, and ensure that the data is ready for the AutoEncoder preprocessing stage.
+
+---
+
+## Tasks Completed
+
+- Loaded the 'Processed_full.csv' dataset.
+- Verified the dataset dimensions.
+- Inspected all available dataset features.
+- Examined the data types of every feature.
+- Extracted the raw CIR measurements.
+- Converted hexadecimal CIR strings into numerical byte arrays.
+- Detected malformed (invalid) CIR samples.
+- Verified the length of valid CIR measurements.
+
+---
+
+## Output
+
+The dataset was successfully explored and validated before starting the Deep Learning pipeline.
+
+The preprocessing script produced the following results:
+
+- Total measurement records: **100557**
+- Dataset features: **48**
+- Invalid CIR samples detected: **69**
+- Valid CIR samples available: **100488**
+- Length of each valid CIR measurement: **1200 bytes**
+
+The dataset is now ready for the next preprocessing stage.
+
+---
+
+## Key Statistics
+
+| Item | Value |
+|------|------:|
+| Total Records | 100557 |
+| Features | 48 |
+| Invalid CIR Samples | 69 |
+| Valid CIR Samples | 100488 |
+| CIR Length | 1200 bytes |
+
+---
+
+## What I Learned Today
+
+Today I learned how the raw UWB CIR measurements are stored inside the dataset and how they must be converted from hexadecimal strings into numerical arrays before they can be processed by a neural network.
+
+I also learned that validating the dataset is an essential step before model training because corrupted CIR measurements can interrupt the preprocessing pipeline and negatively affect the learning process.
+
+---
+
+## Personal Reflection
+
+Before today, I thought preparing the dataset would be a simple loading step.
+
+However, I realized that a considerable amount of work is required before building the AutoEncoder. Even a small number of corrupted CIR samples can stop the preprocessing process if they are not detected properly.
+
+This stage helped me better understand the structure of the experimental dataset used in the paper and increased my confidence in reproducing the remaining parts of the proposed framework.
+
+---
+
+## Next Step
+
+Normalize the valid CIR measurements and convert them into tensors suitable for training the convolutional AutoEncoder described in the paper.
